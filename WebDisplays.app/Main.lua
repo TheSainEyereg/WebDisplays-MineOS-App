@@ -104,7 +104,7 @@ end )
 
 
 Tab(localization.sett, function()
-  Image("/Sett.pic")
+  Image("/Resources/Sett.pic")
   BButton(localization.offs).onTouch = function()
     openURL("mod://webdisplays/main.html")
   end
@@ -114,7 +114,7 @@ Tab(localization.sett, function()
 end )
 
 Tab(localization.abot, function()
-  Image("/Auth.pic")
+  Image("/Resources/Auth.pic")
   Text(localization.auth)
   Button(localization.ruvk).onTouch = function()
     openURL("m.vk.com/olejka_top4ik")
