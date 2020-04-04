@@ -97,7 +97,7 @@ Tab(localization.urlc, function()
   end
   Text(localization.curl)
   WebAdr = Input(localization.tyrl)
-  BButton(localization.gobn).onTouch = function()
+  Button(localization.gobn).onTouch = function()
     openURL(WebAdr)
   end
 end )
