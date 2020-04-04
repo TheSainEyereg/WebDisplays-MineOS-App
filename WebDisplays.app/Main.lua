@@ -119,6 +119,9 @@ Tab(localization.abot, function()
   Button(localization.ruvk).onTouch = function()
     openURL("m.vk.com/olejka_top4ik")
   end
+  Button(localization.mweb).onTouch = function()
+    openURL("olejka.pw")
+  end
   Text(localization.atxt)
   Text("github.com/TheSainEyereg/WebDisplays-MineOS-App")
   Button(localization.gthb).onTouch = function()
