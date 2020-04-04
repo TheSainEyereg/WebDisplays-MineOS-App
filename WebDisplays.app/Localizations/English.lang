@@ -19,5 +19,6 @@
   unlk = "Unlink screen",
   abot = "About",
   auth = "Author: Oleg Logvinov vk.com/olejka_top4ik",
+  mweb = "My website",
   atxt = "About all bugs report to the AppMarket page or visit official github repo",
 }
