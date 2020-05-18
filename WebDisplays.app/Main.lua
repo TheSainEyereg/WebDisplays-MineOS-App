@@ -26,7 +26,6 @@ local layout = window:addChild(GUI.layout(1, 3, window.width, window.height, 1, 
 -- Context menu
 
 ---------------------------functions---------------------------------------------
-
 local function Tab(txt, func)
   window.tabBar:addItem(txt).onTouch = function()
     layout:removeChildren()
@@ -70,7 +69,6 @@ end
 --open URL
 
 ----------------------------------main-------------------------------------------
-
 Tab(localization.urlc, function()
   Text(localization.srch)
   Button(localization.gogl).onTouch = function()
@@ -128,6 +126,7 @@ Tab(localization.abot, function()
     openURL("github.com/TheSainEyereg/WebDisplays-MineOS-App")
   end  
 end )
+
 ---------------------------------------------------------------------------------
 
 window.onResize = function(width, height)
