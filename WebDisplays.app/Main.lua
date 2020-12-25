@@ -1,4 +1,4 @@
---------------------------------core---------------------------------------------
+----------------------------------------core----------------------------------------
 local GUI = require("GUI")
 local system = require("System")
 local image = require("Image")
@@ -25,7 +25,7 @@ local layout = window:addChild(GUI.layout(1, 3, window.width, window.height, 1, 
 --end
 -- Context menu
 
----------------------------functions---------------------------------------------
+----------------------------------------func----------------------------------------
 local function Tab(txt, func)
   window.tabBar:addItem(txt).onTouch = function()
     layout:removeChildren()
@@ -68,7 +68,7 @@ function openURL(url)
 end
 --open URL
 
-----------------------------------main-------------------------------------------
+----------------------------------------main----------------------------------------
 Tab(localization.urlc, function()
   Text(localization.srch)
   Button(localization.gogl).onTouch = function()
@@ -127,7 +127,7 @@ Tab(localization.abot, function()
   end  
 end )
 
----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 window.onResize = function(width, height)
   window.tabBar.width = width
