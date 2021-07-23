@@ -7,7 +7,6 @@ local component = require("component")
 local wdScreen = component.get("webdisplays")
 local SD = fs.path(system.getCurrentScript())
 local localization = system.getLocalization(SD .. "/Localizations/")
-local url = nil
 
 if not wdScreen then
   GUI.alert(localization.wdnc)
@@ -16,14 +15,6 @@ end
 
 local workspace, window, menu = system.addWindow(GUI.tabbedWindow(1, 1, 100, 30, 0xE1E1E1))
 local layout = window:addChild(GUI.layout(1, 3, window.width, window.height, 1, 1))
--- Add single cell layout to window
-
---local contextMenu = menu:addContextMenuItem("Settings")
---contextMenu:addItem("TurnOff Display")
---contextMenu:addItem("Close").onTouch = function()
---  window:remove()
---end
--- Context menu
 
 ----------------------------------------func----------------------------------------
 local function Tab(txt, func)
@@ -59,7 +50,7 @@ local function Image(adr)
  end
 --image
 
-function openURL(url)
+local function openURL(url)
   if wdScreen.isLinked() then
     wdScreen.setURL(url)
   else
@@ -72,26 +63,26 @@ end
 Tab(localization.urlc, function()
   Text(localization.srch)
   Button(localization.gogl).onTouch = function()
-    openURL("google.com")
+    openURL("https://google.com/")
   end
   Button(localization.yanx).onTouch = function()
-    openURL("yandex.ru")
+    openURL("https://yandex.ru/")
   end
   Text(localization.polr)
   Button(localization.ytbe).onTouch = function()
-    openURL("youtube.com")
+    openURL("https://youtube.com/")
   end
   Button(localization.ruvk).onTouch = function()
-    openURL("vk.com")
+    openURL("https://vk.com/")
   end
   Button(localization.twtr).onTouch = function()
-    openURL("twitter.com")
+    openURL("https://twitter.com/")
   end
   Button(localization.fabk).onTouch = function()
-    openURL("facebook.com")
+    openURL("https://facebook.com/")
   end
   Button(localization.gthb).onTouch = function()
-    openURL("github.com")
+    openURL("https://github.com/")
   end
   Text(localization.curl)
   WebAdr = Input(localization.tyrl)
@@ -115,15 +106,15 @@ Tab(localization.abot, function()
   Image("/Resources/Auth.pic")
   Text(localization.auth)
   Button(localization.ruvk).onTouch = function()
-    openURL("m.vk.com/olejka_top4ik")
+    openURL("https://m.vk.com/olejka_top4ik/")
   end
   Button(localization.mweb).onTouch = function()
-    openURL("olejka.pw")
+    openURL("https://olejka.ru/")
   end
   Text(localization.atxt)
-  Text("github.com/TheSainEyereg/WebDisplays-MineOS-App")
+  Text("https://github.com/TheSainEyereg/WebDisplays-MineOS-App/")
   Button(localization.gthb).onTouch = function()
-    openURL("github.com/TheSainEyereg/WebDisplays-MineOS-App")
+    openURL("https://github.com/TheSainEyereg/WebDisplays-MineOS-App/")
   end  
 end )
 
